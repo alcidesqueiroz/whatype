@@ -1,0 +1,22 @@
+const tap = require('tap');
+const whatype = require('./index');
+
+tap.equal(whatype(''), 'string');
+tap.equal(whatype('whatever'), 'string');
+tap.equal(whatype(null), 'null');
+tap.equal(whatype(undefined), 'undefined');
+tap.equal(whatype(NaN), 'not-a-number');
+tap.equal(whatype(0), 'number');
+tap.equal(whatype(42), 'number');
+tap.equal(whatype(30.5), 'number');
+tap.equal(whatype(-17), 'number');
+tap.equal(whatype(true), 'boolean');
+tap.equal(whatype(false), 'boolean');
+tap.equal(whatype(Infinity), 'infinity');
+tap.equal(whatype(-Infinity), '-infinity');
+tap.equal(whatype({}), 'object');
+tap.equal(whatype({ a: 123 }), 'object');
+tap.equal(whatype([]), 'array');
+tap.equal(whatype([ 11, 22 ]), 'array');
+tap.equal(whatype(function(){}), 'function');
+tap.equal(whatype(() => {}), 'function');
