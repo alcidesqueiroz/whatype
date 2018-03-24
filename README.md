@@ -29,6 +29,8 @@ Whatype has two possible usages:
 Returns a string with the type of the passed value.
 
 ```javascript
+const whatype = require('whatype');
+
 // String primitives
 whatype('whatever'); // => 'string'
 
@@ -130,6 +132,8 @@ whatype(new DataView(new ArrayBuffer())); // => 'data-view'
 Returns a boolean indicating if the value is of the supplied type.
 
 ```javascript
+const whatype = require('whatype');
+
 // Primitives
 whatype.is('foo', 'string-primitive'); //=> true
 whatype.is(new String('foo'), 'string-primitive'); //=> false
