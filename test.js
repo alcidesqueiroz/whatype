@@ -61,11 +61,14 @@ test('whatype function', (t) => {
 
 test('whatype.is function', (t) => {
   t.ok(whatype.is('', 'string'));
+  t.ok(whatype.is('', 'string-primitive'));
   t.ok(whatype.is('', 'falsy'));
+  t.ok(whatype.is('whatever', 'string-primitive'));
   t.ok(whatype.is('whatever', 'string'));
   t.ok(whatype.is('whatever', 'truthy'));
   t.ok(whatype.is(new String('foo'), 'string'));
   t.ok(whatype.is(new String('foo'), 'string-object'));
+  t.notOk(whatype.is(new String('foo'), 'string-primitive'));
   t.ok(whatype.is(new String(''), 'falsy'));
   t.ok(whatype.is(null, 'null'));
   t.ok(whatype.is(undefined, 'undefined'));
@@ -78,22 +81,30 @@ test('whatype.is function', (t) => {
   t.ok(whatype.is(NaN, 'numeric'));
   t.ok(whatype.is(NaN, 'falsy'));
   t.ok(whatype.is(0, 'number'));
+  t.ok(whatype.is(0, 'number-primitive'));
   t.ok(whatype.is(0, 'numeric'));
   t.ok(whatype.is(0, 'falsy'));
   t.ok(whatype.is(42, 'number'));
   t.ok(whatype.is(42, 'numeric'));
+  t.ok(whatype.is(42, 'number-primitive'));
   t.ok(whatype.is(30.5, 'number'));
   t.ok(whatype.is(30.5, 'numeric'));
+  t.ok(whatype.is(30.5, 'number-primitive'));
   t.ok(whatype.is(-17, 'number'));
+  t.ok(whatype.is(-17, 'number-primitive'));
   t.ok(whatype.is(-17, 'numeric'));
   t.ok(whatype.is(new Number('12'), 'number'));
   t.ok(whatype.is(new Number('12'), 'number-object'));
+  t.notOk(whatype.is(new Number('12'), 'number-primitive'));
   t.ok(whatype.is(new Number('12'), 'numeric'));
   t.ok(whatype.is(true, 'boolean'));
+  t.ok(whatype.is(true, 'boolean-primitive'));
   t.ok(whatype.is(false, 'boolean'));
+  t.ok(whatype.is(false, 'boolean-primitive'));
   t.ok(whatype.is(false, 'falsy'));
   t.ok(whatype.is(new Boolean(1), 'boolean'));
   t.ok(whatype.is(new Boolean(1), 'boolean-object'));
+  t.notOk(whatype.is(new Boolean(1), 'boolean-primitive'));
   t.ok(whatype.is(new Boolean(0), 'falsy'));
   t.ok(whatype.is(function() { return arguments; }(), 'arguments'));
   t.ok(whatype.is(function() { return arguments; }(), 'object'));

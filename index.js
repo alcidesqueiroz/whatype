@@ -75,6 +75,11 @@ whatype.is = function is(val, type) {
     ['string', 'number', 'boolean'].indexOf(detectedType) > -1 &&
     typeof val === 'object') return true;
 
+  // string-primitive, number-primitive and boolean-primitive types
+  if (type === `${detectedType}-primitive` &&
+    ['string', 'number', 'boolean'].indexOf(detectedType) > -1 &&
+    typeof val !== 'object') return true;
+
   // numeric type, which englobes NaN, Infinity and -Infinity
   if (type === 'numeric' &&
     ['number', 'not-a-number', 'infinity', '-infinity'].indexOf(detectedType) > -1) return true;
