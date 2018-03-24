@@ -1,7 +1,7 @@
 {
   "name": "whatype",
   "version": "1.0.0",
-  "description": "🕵 No more headaches to find the type of a value in JavaScript. Whatype is a tiny module that saves you from some annoying type-related WTFJS's.",
+  "description": "🕵 No more headaches to find the type of a value in JavaScript. Whatype is a tiny module that saves you from some annoying type-related WTFJSes.",
   "license": "MIT",
   "repository": "alcidesqueiroz/whatype",
   "author": {
@@ -19,11 +19,12 @@
     "index.js"
   ],
   "keywords": [
-    "try",
-    "array",
-    "conversion"
+    "type",
+    "typeof",
+    "values"
   ],
   "devDependencies": {
+    "airtap": "^0.0.4",
     "eslint": "^4.18.2",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-plugin-import": "^2.9.0",
