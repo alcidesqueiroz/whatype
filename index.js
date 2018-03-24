@@ -84,8 +84,9 @@ whatype.is = function is(val, type) {
   if (type === 'numeric' &&
     ['number', 'not-a-number', 'infinity', '-infinity'].indexOf(detectedType) > -1) return true;
 
-  // An arguments object is also... an object!
-  if (type === 'object' && detectedType === 'arguments') return true;
+  // Errors, dates, arguments and promises are also... objects!
+  if (type === 'object' &&
+    ['arguments', 'error', 'date', 'promise'].indexOf(detectedType) > -1) return true;
 
   // A literal object (whose constructor is Object)
   if (type === 'literal-object' && val.constructor === Object) return true;
