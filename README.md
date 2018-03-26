@@ -22,7 +22,7 @@ $ yarn add whatype
 ## Usage
 Whatype has two possible usages:
 1. By calling the `whatype` function itself, which returns a string with the detected type.
-2. By calling the `whatype.is` method, which checks if a value is of a specific type. For some needs, this form is a way more versatile, since it allows checking for things like "pure-object", "literal-object",  "empty-array", "empty-object", "falsy", "truthy" and other possibilities.
+2. By calling the `whatype.is` method, which checks if a value is of a specific type. For some needs, this form is way more versatile, since it allows checking for things like "pure-object", "literal-object",  "empty-array", "empty-object", "falsy", "truthy" and other possibilities.
 
 ### whatype(value)
 
