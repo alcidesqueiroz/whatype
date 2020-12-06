@@ -37,7 +37,7 @@ function whatype(val) {
   // Typed arrays
   const typedArrayTypes = ['Float32Array', 'Float64Array', 'Int16Array', 'Int32Array',
     'Int8Array', 'Uint16Array', 'Uint32Array', 'Uint8Array', 'UInt8ClampedArray'];
-  if (typedArrayTypes.some(t => strType.indexOf(t) > -1)) return 'typed-array';
+  if (typedArrayTypes.some((t) => strType.indexOf(t) > -1)) return 'typed-array';
 
 
   if ((Array.isArray && Array.isArray(val)) || val.constructor === Array) return 'array';

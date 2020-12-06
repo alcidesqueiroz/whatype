@@ -1,4 +1,4 @@
-# whatype [![Build status](https://travis-ci.org/alcidesqueiroz/whatype.svg?branch=master)](https://travis-ci.org/alcidesqueiroz/whatype)
+# whatype [![Build status](https://travis-ci.com/alcidesqueiroz/whatype.svg?branch=master)](https://travis-ci.com/alcidesqueiroz/whatype)
 
 > 🕵 No more headaches to find the type of a value in JavaScript. Whatype is a tiny module that saves you from some annoying type-related WTFJSes.
 
