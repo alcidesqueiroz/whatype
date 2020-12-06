@@ -1,4 +1,4 @@
-# whatype [![Build status](https://travis-ci.org/alcidesqueiroz/whatype.svg?branch=master)](https://travis-ci.org/alcidesqueiroz/whatype)
+# whatype [![Build status](https://travis-ci.com/alcidesqueiroz/whatype.svg?branch=master)](https://travis-ci.com/alcidesqueiroz/whatype)
 
 > 🕵 No more headaches to find the type of a value in JavaScript. Whatype is a tiny module that saves you from some annoying type-related WTFJSes.
 
@@ -10,7 +10,7 @@ What is a type? Well, this is surely one of the most debated topics in computer 
 
 With npm:
 ```
-$ npm install --save whatype
+$ npm install whatype
 ```
 
 With Yarn:
